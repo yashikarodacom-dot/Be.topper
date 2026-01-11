@@ -3,14 +3,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Be Topper | India's Leading Infinite Study Portal (Class 9-12)</title>
     <meta name="description" content="Access infinite questions, AI mentorship, and high-yield notes for CBSE, ICSE, and State Boards. The ultimate academic portal for Indian students.">
     
     <!-- PWA Support -->
     <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Be Topper">
     <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3534/3534139.png">
 
     <!-- OpenGraph / Social Media -->
@@ -32,6 +34,9 @@
             color: black;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
+            /* Prevent elastic scrolling and system UI interference */
+            overscroll-behavior-y: none;
+            touch-action: pan-x pan-y;
         }
         .cursive-logo {
             font-family: 'Dancing Script', cursive;
@@ -75,6 +80,11 @@
         @media print {
             .no-print { display: none !important; }
         }
+        /* Mobile notch protection */
+        main {
+            padding-bottom: env(safe-area-inset-bottom);
+            padding-top: env(safe-area-inset-top);
+        }
     </style>
 <script type="importmap">
 {
@@ -91,7 +101,7 @@
     <div id="splash" class="splash-screen">
         <div class="text-center animate-pulse">
             <h1 class="text-5xl font-bold cursive-logo mb-2">be.topper</h1>
-            <p class="text-[10px] font-black uppercase tracking-[0.6em] opacity-20">Production Node Initialized</p>
+            <p class="text-[10px] font-black uppercase tracking-[0.6em] opacity-20">Application Shell Initializing</p>
         </div>
     </div>
     <div id="root"></div>
