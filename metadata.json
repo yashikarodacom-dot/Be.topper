@@ -1,0 +1,8 @@
+{
+  "name": "Be Topper | India's #1 Infinite Study Portal",
+  "description": "A comprehensive AI-powered educational ecosystem for Indian students (Classes 9-12). Featuring infinite question banks, AI mentorship, predictive exam papers, and interactive science labs across all major national and state boards.",
+  "requestFramePermissions": [
+    "microphone",
+    "geolocation"
+  ]
+}

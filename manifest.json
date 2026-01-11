@@ -1,0 +1,18 @@
+
+{
+  "short_name": "Be Topper",
+  "name": "Be Topper Study Portal",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3534/3534139.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "background_color": "#FAF7F2",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#000000",
+  "description": "Infinite Question Bank & AI Study Mentor for Indian Students."
+}
